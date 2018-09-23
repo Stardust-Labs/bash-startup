@@ -4,6 +4,7 @@ alias python=python3
 alias pip=pip3
 alias gimp="sommelier -X --scale=0.8 --dpi=160 gimp"
 alias connect-adb="adb connect 100.115.92.2:5555"
+alias localserver="python -m http.server"
 
 ## ssh aliases
 
