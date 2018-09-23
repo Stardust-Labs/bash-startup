@@ -1,2 +1,4 @@
 .bash-aliases
 .bash-functions
+.startup
+.bash-exports
