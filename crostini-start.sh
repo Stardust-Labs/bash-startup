@@ -49,7 +49,8 @@ cd devtools
 wget https://storage.googleapis.com/flutter_infra/releases/beta/linux/flutter_linux_v0.8.2-beta.tar.xz -O flutter.tar.xz
 tar xf flutter.tar.xz
 rm flutter.tar.xz
-#export PATH=~/devtools/flutter/bin:$PATH
+# install lib32stdc++6 dependency
+sudo apt-get -y install "lib32stdc++6"
 
 ## create custom aliases and functions files
 cd ~/.bash-extensions
