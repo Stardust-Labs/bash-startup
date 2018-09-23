@@ -58,7 +58,7 @@ cat > .bash-aliases <<- EOM
 ## convenience and shortcut aliases
 alias python=python3
 alias pip=pip3
-alias gimp="sommelier -X --scale=0.8 --dpi=160 gimp
+alias gimp="sommelier -X --scale=0.8 --dpi=160 gimp"
 
 ## ssh aliases
 

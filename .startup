@@ -1,0 +1,3 @@
+source ~/.bash-extensions/.bash-aliases
+source ~/.bash-extensions/.bash-functions
+source ~/.bash-extensions/.bash-exports
