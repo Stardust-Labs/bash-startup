@@ -1,9 +1,0 @@
-function mkdircd {
-  mkdir $1
-  cd $1
-}
-
-function quicksom {
-  sommelier -X --scale=$1 --dpi=160 $2
-}
-

@@ -12,7 +12,7 @@ alias gimp="sommelier -X --scale=0.8 --dpi=160 gimp"
 
 EOM
 
-cat > .bash-fucntions <<- EOM
+cat > .bash-functions <<- EOM
 function mkdircd {
   mkdir \$1
   cd \$1
