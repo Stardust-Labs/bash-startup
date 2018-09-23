@@ -3,6 +3,7 @@ cat > .bash-aliases <<- EOM
 alias python=python3
 alias pip=pip3
 alias gimp="sommelier -X --scale=0.8 --dpi=160 gimp"
+alias connect-adb="adb connect 100.115.92.2:5555"
 
 ## ssh aliases
 
@@ -26,6 +27,7 @@ EOM
 
 cat > .bash-exports <<- EOM
 export PATH=~/devtools/flutter/bin:\$PATH
+export PATH=\$PATH:~/Android/Sdk/tools:~/Android/Sdk/platform-tools
 
 EOM
 

@@ -49,10 +49,12 @@ cd devtools
 wget https://storage.googleapis.com/flutter_infra/releases/beta/linux/flutter_linux_v0.8.2-beta.tar.xz -O flutter.tar.xz
 tar xf flutter.tar.xz
 rm flutter.tar.xz
+# flutter is moved to path in .bash-exports
 # install lib32stdc++6 dependency
 sudo apt-get -y install "lib32stdc++6"
+# install adb, needed for android development
+sudo apt-get -y install adb
 
 ## create custom aliases and functions files
 cd ~/.bash-extensions
 source create-bashfiles.sh
-
