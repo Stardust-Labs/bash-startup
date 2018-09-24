@@ -3,7 +3,9 @@ cat > .bash-aliases <<- EOM
 alias python=python3
 alias pip=pip3
 alias gimp="sommelier -X --scale=0.8 --dpi=160 gimp"
+alias adb="~/Android/Sdk/platform-tools/adb"
 alias connect-adb="adb connect 100.115.92.2:5555"
+alias disconnect-adb="adb disconnect 100.115.92.2:5555"
 alias localserver="python -m http.server"
 
 ## ssh aliases

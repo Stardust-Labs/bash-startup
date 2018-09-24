@@ -14,3 +14,5 @@ Also creates .bash-aliases, .bash-functions, and .bash-exports with common confi
 After running the script, .bash-extensions/.startup must be sourced in the local .bashrc file.
 
 .bash-exports may require manual changes if the HOME directory is not /home/jamekrut.
+
+Aliases and exports contain references to the Android SDK in the source directory.  As the SDK receives frequent updates, its installation is not included in this script and must be performed manually after running crostini-start.sh.
