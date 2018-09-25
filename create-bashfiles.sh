@@ -7,7 +7,7 @@ alias adb="~/Android/Sdk/platform-tools/adb"
 alias connect-adb="adb connect 100.115.92.2:5555"
 alias disconnect-adb="adb disconnect 100.115.92.2:5555"
 alias localserver="python -m http.server"
-
+alias phplint="find . -type f -name '*.php' -exec php -l {} \; | (! grep -v \"No syntax errors detected\" )"
 ## ssh aliases
 
 ## directory shortcuts
