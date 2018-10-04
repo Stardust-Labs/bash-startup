@@ -44,6 +44,9 @@ sudo apt-get -y install gimp
 ## install okular
 sudo apt-get -y install okular
 
+## install thunderbird
+sudo apt-get -y install thunderbird
+
 ## install flutter globally
 cd devtools
 wget https://storage.googleapis.com/flutter_infra/releases/beta/linux/flutter_linux_v0.8.2-beta.tar.xz -O flutter.tar.xz

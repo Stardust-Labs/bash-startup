@@ -6,6 +6,7 @@ Composer
 Flutter  
 GIMP  
 Okular  
+Thunderbird 
 Sublime Text  
 Sublime Merge  
 
