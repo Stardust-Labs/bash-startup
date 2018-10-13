@@ -26,6 +26,16 @@ function quicksom {
   sommelier -X --scale=\$1 --dpi=160 \$2
 }
 
+function compileAsm {
+  FNAME="\$1"
+  arrFNAME=(\${FNAME//./ })
+  LNAME="\$arrFNAME"
+  ONAME="\$LNAME.o"
+  nasm -f elf64 -o \$ONAME \$FNAME
+  ld \$ONAME -o \$LNAME
+  rm \$ONAME
+}
+
 EOM
 
 cat > .bash-exports <<- EOM
