@@ -4,6 +4,7 @@ Python 3
 Pip 3  
 Composer  
 Flutter  
+NASM 
 GIMP  
 Okular  
 Thunderbird 
