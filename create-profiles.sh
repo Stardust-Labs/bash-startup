@@ -12,5 +12,8 @@ call plug#end
 :set tabstop=4
 :syntax on
 
+autocmd Filetype dart setlocal tabstop=2
+autocmd Filetype json setlocal tabstop=2
+
 EOM
 
