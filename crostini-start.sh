@@ -38,6 +38,9 @@ echo "deb https://download.sublimetext.com/ apt/stable/" | sudo tee /etc/apt/sou
 sudo apt-get update
 sudo apt-get -y install sublime-text sublime-merge
 
+## install vim-plug
+curl -fLo ~/.vim/autoload/plug.vim --create-dirs \https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+
 ## install gimp
 sudo apt-get -y install gimp
 
@@ -62,3 +65,4 @@ sudo apt-get -y install adb
 ## create custom aliases and functions files
 cd ~/.bash-extensions
 source create-bashfiles.sh
+source create-profiles.sh

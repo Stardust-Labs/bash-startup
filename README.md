@@ -3,8 +3,9 @@ PHP 7.2
 Python 3  
 Pip 3  
 Composer  
+Vim-Plug  
 Flutter  
-NASM 
+NASM  
 GIMP  
 Okular  
 Thunderbird 
@@ -18,3 +19,5 @@ After running the script, .bash-extensions/.startup must be sourced in the local
 .bash-exports may require manual changes if the HOME directory is not /home/jamekrut.
 
 Aliases and exports contain references to the Android SDK in the source directory.  As the SDK receives frequent updates, its installation is not included in this script and must be performed manually after running crostini-start.sh.
+
+A .vimrc file with vim-plug plugins will be created, but the `:PlugInstall` will need to be manually run from within vim in order to actually install plugins.
