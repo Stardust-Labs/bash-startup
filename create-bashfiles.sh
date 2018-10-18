@@ -1,3 +1,5 @@
+cd ~/.bash-extensions
+
 cat > .bash-aliases <<- EOM
 ## convenience and shortcut aliases
 alias python=python3
