@@ -38,6 +38,46 @@ function compileAsm {
   rm \$ONAME
 }
 
+function run-phpunit {
+  declare opt
+  declare OPTARG
+  declare OPTIND
+  declare _testname
+  declare _outfile
+
+  while getopts t:o: opt; do
+    case \$opt in
+	  t)
+	    _testname=\$OPTARG >&2
+		;;
+	  o)
+	    _outfile=\$OPTARG >&2
+		;;
+	  \\?)
+	    echo "Invalid option: -\$OPTARG" >&2
+		exit 1
+		;;
+	  :)
+	    echo "Option -\$OPTARG requires an argument." >&2
+		exit 1
+		;;
+	esac
+  done
+  if [[ -n "\$_testname" && -n "\$_outfile" ]]
+  then
+    ./vendor/bin/phpunit --bootstrap vendor/autoload.php --testdox tests/"\$_testname" > "\$_outfile"
+  elif [[ -n "\$_testname" ]]
+  then
+    ./vendor/bin/phpunit --bootstrap vendor/autoload.php --testdox tests/"\$_testname"
+  elif [[ -n "\$_outfile" ]]
+  then
+    ./vendor/bin/phpunit --bootstrap vendor/autoload.php --testdox tests > "\$_outfile"
+  else
+    ./vendor/bin/phpunit --bootstrap vendor/autoload.php --testdox tests
+  fi
+}
+
+
 EOM
 
 cat > .bash-exports <<- EOM
