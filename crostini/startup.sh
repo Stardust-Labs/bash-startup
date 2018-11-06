@@ -1,10 +1,20 @@
+## store repo directory because this script changes dir a few times
+CURDIR=$PWD
+
 ## create folder architecture
-cd ~
-mkdir downloads
-mkdir devtools
-mkdir projects
-mkdir .ssh
-mkdir .bash-extensions
+mkdir ~/downloads
+mkdir ~/downloads/deb-packages
+mkdir ~/devtools
+mkdir ~/projects
+mkdir ~/scripts
+mkdir ~/scripts/asm
+mkdir ~/scripts/cpp
+mkdir ~/scripts/dart
+mkdir ~/scripts/php
+mkdir ~/scripts/python
+mkdir ~/scripts/js
+mkdir ~/.ssh
+mkdir ~/.bash-extensions
 
 ## install basic things that are needed
 sudo apt-get update
@@ -63,6 +73,12 @@ sudo apt-get -y install "lib32stdc++6"
 sudo apt-get -y install adb
 
 ## create custom aliases and functions files
-cd ~/.bash-extensions
+cd $CURDIR
 source create-bashfiles.sh
+cd $CURDIR && cd ..
 source create-profiles.sh
+source npm-installs.sh
+source pip-installs.sh
+source composer-installs.sh
+cd $CURDIR
+
