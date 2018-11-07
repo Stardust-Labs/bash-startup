@@ -4,7 +4,9 @@ Downloads essential programs and sets up directories in a new install or recentl
 
 ## Pre-install Requirements
 
-[Node.js](https://nodejs.org) needs to be installed manually prior to running the environment's install.sh file.  NPM is used for some packages.
+[Node.js](https://nodejs.org) needs to be installed manually prior to running the environment's install.sh file.  NPM is used for some packages.  (This is not required for ubuntu).
+
+For Ubuntu installs, [Composer](https://getcomposer.org) will need to be manually installed prior to running the script, as the verification hash changes with release and must be entered manually.
 
 ## Installed Packages / Tools
 

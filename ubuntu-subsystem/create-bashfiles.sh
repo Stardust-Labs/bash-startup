@@ -71,3 +71,5 @@ source ~/.bash-extensions/.bash-exports
 
 EOM
 
+source ~/.bash-extensions/.startup
+
