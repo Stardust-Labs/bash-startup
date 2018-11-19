@@ -19,7 +19,7 @@ mkdir ~/.bash-extensions
 ## install basic things that are needed
 sudo apt-get update
 sudo apt-get -y upgrade
-sudo apt-get -y install wget curl man-db iputils-ping htop nasm
+sudo apt-get -y install wget curl man-db iputils-ping htop nasm unzip
 
 ## install php7.2
 sudo apt-get -y install apt-transport-https lsb-release ca-certificates
