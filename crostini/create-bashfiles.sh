@@ -82,6 +82,9 @@ cat > ~/.bash-extensions/.bash-exports <<- EOM
 export PATH=~/devtools/flutter/bin:\$PATH
 export PATH=\$PATH:~/Android/Sdk/tools:~/Android/Sdk/platform-tools
 
+export PATH=\$PATH:/usr/lib/dart/bin
+export PATH=\$PATH:~/.pub-cache/bin
+
 EOM
 
 cat > ~/.bash-extensions/.startup <<- EOM
