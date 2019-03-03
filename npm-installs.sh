@@ -1,4 +1,5 @@
-sudo npm install -g pixi.js
-sudo npm install -g http-server
-sudo npm install -g ember-cli
+npm install -g pixi.js
+npm install -g http-server
+npm install -g ember-cli
+npm install -g @vue/cli
 
