@@ -36,6 +36,12 @@ sudo apt install nodejs -y
 ## install python
 sudo apt-get -y install python3 python3-pip
 
+## install dart
+sudo sh -c 'curl https://dl-ssl.google.com/linux/linux_signing_key.pub | apt-key add -'
+sudo sh -c 'curl https://storage.googleapis.com/download.dartlang.org/linux/debian/dart_stable.list > /etc/apt/sources.list.d/dart_stable.list'
+sudo apt-get update
+sudo apt-get -y install dart
+
 ## install vim-plug
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs \https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
@@ -44,6 +50,8 @@ cd $CURDIR
 source create-bashfiles.sh
 cd $CURDIR && cd ..
 source create-profiles.sh
+
+# TODO: these need to be made available before installs can be performed
 source npm-installs.sh
 source pip-installs.sh
 source composer-installs.sh
