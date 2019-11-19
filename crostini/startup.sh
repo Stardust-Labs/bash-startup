@@ -32,10 +32,18 @@ sudo apt-get -y install php7.2
 sudo apt-get -y install php7.2-cli php7.2-common php7.2-curl php7.2-gd php7.2-json php7.2-mbstring php7.2-mysql php7.2-opcache php7.2-readline php7.2-xml php7.2-zip
 
 ## install composer globally
+EXPECTED_SIGNATURE="$(wget -O - https://composer.github.io/installer.sig)"
 php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
-php -r "if (hash_file('SHA384', 'composer-setup.php') === '544e09ee996cdf60ece3804abc52599c22b1f40f4323403c44d44fdfdd586475ca9813a858088ffbc1f233e9b180f061') { echo 'Installer verified'; } else { echo 'Installer corrupt'; unlink('composer-setup.php'); } echo PHP_EOL;"
+ACTUAL_SIGNATURE="$(php -r "echo hash_file('sha384', 'composer-setup.php');")"
+if [ "$EXPECTED_SIGNATURE" != "$ACTUAL_SIGNATURE" ]
+then
+	>&2 echo 'ERROR: Invalid Composer installer signature'
+	rm composer-setup.php
+	exit 1
+fi
 php composer-setup.php
 php -r "unlink('composer-setup.php');"
+
 
 sudo mv composer.phar /usr/local/bin/composer
 
