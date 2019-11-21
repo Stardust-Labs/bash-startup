@@ -84,6 +84,7 @@ export PATH=\$PATH:~/Android/Sdk/tools:~/Android/Sdk/platform-tools
 
 export PATH=\$PATH:/usr/lib/dart/bin
 export PATH=\$PATH:~/.pub-cache/bin
+export PATH=\$PATH:~/.local/bin
 
 EOM
 
