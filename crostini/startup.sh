@@ -50,6 +50,16 @@ sudo mv composer.phar /usr/local/bin/composer
 ## install python
 sudo apt-get -y install python3 python3-pip
 
+## install nodejs
+curl -sL https://deb.nodesource.com/setup_8.x | sudo bash -
+sudo apt install nodejs -y
+
+## install dart
+sudo sh -c 'curl https://dl-ssl.google.com/linux/linux_signing_key.pub | apt-key add -'
+sudo sh -c 'curl https://storage.googleapis.com/download.dartlang.org/linux/debian/dart_stable.list > /etc/apt/sources.list.d/dart_stable.list'
+sudo apt-get update
+sudo apt-get -y install dart
+
 ## install sublime text and merge
 wget -qO - https://download.sublimetext.com/sublimehq-pub.gpg | sudo apt-key add -
 echo "deb https://download.sublimetext.com/ apt/stable/" | sudo tee /etc/apt/sources.list.d/sublime-text.list
